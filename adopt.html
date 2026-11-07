@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adopt a Pet - Paws & Claws</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">🐾 Paws & Claws</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopt.html" class="active">Adopt</a></li>
+        <li><a href="care-tips.html">Care Tips</a></li>
+        <li><a href="adoption-form.html">Adoption Form</a></li>
+        <li><a href="success-stories.html">Success Stories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Available Pets for Adoption</h2>
+    
+    <!-- Filter Controls[cite: 1] -->
+    <div class="filter-container">
+      <div>
+        <label for="type-filter">Type: </label>
+        <select id="type-filter">
+          <option value="all">All</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="age-filter">Age: </label>
+        <select id="age-filter">
+          <option value="all">All Ages</option>
+          <option value="baby">Baby</option>
+          <option value="young">Young</option>
+          <option value="adult">Adult</option>
+        </select>
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" id="fav-filter"> Favorites Only ❤️
+        </label>
+      </div>
+    </div>
+
+    <!-- Dynamic Pet Cards Grid[cite: 1] -->
+    <div id="pet-grid-container" class="pet-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Paws & Claws Adoption Agency.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

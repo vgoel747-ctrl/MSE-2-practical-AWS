@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adoption Application - Paws & Claws</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">🐾 Paws & Claws</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopt.html">Adopt</a></li>
+        <li><a href="care-tips.html">Care Tips</a></li>
+        <li><a href="adoption-form.html" class="active">Adoption Form</a></li>
+        <li><a href="success-stories.html">Success Stories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 style="text-align: center; margin-bottom: 1.5rem;">Adoption Application</h2>
+
+    <!-- Multi-Step Form Container[cite: 1] -->
+    <form id="adoption-form">
+      <!-- Step 1 -->
+      <div class="form-step active" id="step-1">
+        <h3>Step 1: Personal Info</h3>
+        <br>
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required>
+        </div>
+        <button type="button" class="btn" onclick="nextStep()">Next</button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="form-step" id="step-2">
+        <h3>Step 2: Housing & Lifestyle</h3>
+        <br>
+        <div class="form-group">
+          <label for="housing">Housing Type</label>
+          <select id="housing">
+            <option value="house">House</option>
+            <option value="apartment">Apartment</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="yard">Do you have a fenced yard?</label>
+          <select id="yard">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="prevStep()">Previous</button>
+        <button type="button" class="btn" onclick="nextStep()">Next</button>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="form-step" id="step-3">
+        <h3>Step 3: Preference & Submit</h3>
+        <br>
+        <div class="form-group">
+          <label for="preferred-pet">Pet Name / ID</label>
+          <input type="text" id="preferred-pet" placeholder="e.g. Bella" required>
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="prevStep()">Previous</button>
+        <button type="submit" class="btn">Submit Application</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Paws & Claws Adoption Agency.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
